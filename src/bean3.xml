@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--级联注入-->
+    <bean id="staff" class="com.theoldzheng.springTest.Staff">
+        <constructor-arg name="name" value="李四"></constructor-arg>
+        <constructor-arg name="age" value="88"></constructor-arg>
+        <constructor-arg name="dept">
+            <bean id="dept" class="com.theoldzheng.springTest.Dept">
+                <constructor-arg name="name" value="财政部"></constructor-arg>
+            </bean>
+        </constructor-arg>
+
+    </bean>
+
+    <bean id="staff1" class="com.theoldzheng.springTest.Staff">
+
+        <!--级联赋值 -->
+        <property name="name" value="葫芦娃"></property>
+        <property name="age" value="99"></property>
+        <property name="dept" ref="dept1"></property>
+        <property name="dept.name" value="人事部"></property>
+    </bean>
+
+    <bean id="dept1" class="com.theoldzheng.springTest.Dept">
+        <constructor-arg name="name" value="技术部"></constructor-arg>
+    </bean>
+</beans>

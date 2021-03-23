@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="com.theoldzheng.springTest.Person"></bean>
+
+
+    <!--    基于xml配置文件的属性注入 无参构造注入-->
+    <bean id="book" class="com.theoldzheng.springTest.Book">
+        <property name="name" value="张三成仙记"></property>
+        <property name="id" value="20"></property>
+    </bean>
+
+    <!-- 有参构造注入   -->
+    <bean id="order" class="com.theoldzheng.springTest.Order">
+        <constructor-arg name="id" value="2"></constructor-arg>
+        <constructor-arg name="name" value="阿凡达的驴"></constructor-arg>
+
+    </bean>
+
+    <!--    特殊值、空值的注入方式-->
+    <bean id="book1" class="com.theoldzheng.springTest.Book">
+        <property name="name">
+            <null/>
+        </property>
+        <property name="id" value="45"></property>
+    </bean>
+
+    <bean id="book2" class="com.theoldzheng.springTest.Book">
+        <constructor-arg name="id" value="1"></constructor-arg>
+        <constructor-arg name="name">
+<!--            用转义字符 &lt &gt 转义 尖括号-->
+            <value><![CDATA[《张三忏悔录》]]></value>
+        </constructor-arg>
+
+    </bean>
+</beans>

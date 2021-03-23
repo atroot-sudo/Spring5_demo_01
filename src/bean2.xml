@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    注入属性  外部bean-->
+    <!--    UserDAO实现类创建-->
+    <bean id="UserDAOImpl" class="com.theoldzheng.UserDAO.UserDAOImpl"></bean>
+
+    <!--    创建UserService-->
+    <bean id="UserService" class="com.theoldzheng.UserService.UserService">
+        <!--        利用set进行注入属性 需要实现set方法  或者也可以通过constructor来进行注入-->
+        <property name="userDAO" ref="UserDAOImpl"></property>
+    </bean>
+
+</beans>

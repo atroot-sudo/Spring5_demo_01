@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="person1" class="com.theoldzheng.springTest2.Person">
+        <!--        array类型注入-->
+        <property name="array">
+            <array>
+                <value>张三</value>
+                <value>阿彪</value>
+                <value>黄大锤</value>
+            </array>
+        </property>
+        <!--        list类型注入-->
+        <property name="stringList">
+            <list>
+                <value>list1</value>
+                <value>list2</value>
+                <value>list3</value>
+            </list>
+        </property>
+        <!--        map类型注入-->
+        <property name="stringMap">
+            <map>
+                <entry key="张三" value-ref="course"></entry>
+                <entry key="李四" value-ref="course1"></entry>
+                <entry key="王五" value-ref="course2"></entry>
+            </map>
+        </property>
+        <!--        Set类型注入-->
+        <property name="stringSet">
+            <set>
+                <value>1</value>
+                <value>3</value>
+                <value>2</value>
+            </set>
+        </property>
+    </bean>
+
+
+<!--    创造多个对象用于对象类型注入Map属性-->
+    <bean id="course" class="com.theoldzheng.springTest2.Course">
+        <property name="name" value="三儿"></property>
+        <property name="id" value="12"></property>
+    </bean>
+    <bean id="course1" class="com.theoldzheng.springTest2.Course">
+        <property name="name" value="四儿"></property>
+        <property name="id" value="13"></property>
+    </bean>
+    <bean id="course2" class="com.theoldzheng.springTest2.Course">
+        <property name="name" value="六儿"></property>
+        <property name="id" value="14"></property>
+    </bean>
+</beans>

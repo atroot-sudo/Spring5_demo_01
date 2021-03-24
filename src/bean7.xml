@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--bean生命周期的测试-->
+
+<!-- 创建bean对象-->
+<!--    <bean id="order" class="com.theoldzheng.springTest3.Orders" init-method="initMethod" destroy-method="destroyMethod" >-->
+<!--        无参构造，通过set来给属性设置值-->
+<!--        <property name="name" value="111" ></property>-->
+<!--    </bean>-->
+<!--    实现带有后置处理器的生命周期测试-->
+<!--<bean id="post" class="com.theoldzheng.springTest3.MyPost"></bean>-->
+
+
+<!--    实现自动装配-->
+    <bean id="test" class="com.theoldzheng.springTest.Staff" autowire="byName"></bean>
+    <bean id="dept" class="com.theoldzheng.springTest.Dept"></bean>
+</beans>

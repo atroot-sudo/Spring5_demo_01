@@ -1,8 +1,7 @@
-package com.theoldzheng.test;
+
 
 import com.theoldzheng.springTest2.Book;
 import com.theoldzheng.springTest2.Course;
-import com.theoldzheng.springTest2.MyBean;
 import com.theoldzheng.springTest2.Person;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -32,7 +31,17 @@ public class test3 {
 
         Course test = applicationContext2.getBean("test", Course.class);
         System.out.println(test);
+        System.out.println("****************");
 
+    }
+    @Test
+    public void test2(){
+        //多例对象的创建
+        ApplicationContext applicationContext3 = new ClassPathXmlApplicationContext("bean6.xml");
+        com.theoldzheng.springTest.Book book1 = applicationContext3.getBean("book1", com.theoldzheng.springTest.Book.class);
+        System.out.println(book1);
+        com.theoldzheng.springTest.Book book2 = applicationContext3.getBean("book1", com.theoldzheng.springTest.Book.class);
+        System.out.println(book2);
 
     }
 }

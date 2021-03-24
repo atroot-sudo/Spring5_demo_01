@@ -1,6 +1,6 @@
-package com.theoldzheng.UserService;
+package com.theoldzheng.springTest.UserService;
 
-import com.theoldzheng.UserDAO.UserDAO;
+import com.theoldzheng.springTest.UserDAO.UserDAO;
 
 /**
  * Description:

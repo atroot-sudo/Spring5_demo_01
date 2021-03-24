@@ -1,4 +1,3 @@
-package com.theoldzheng.test;
 import com.theoldzheng.springTest.Book;
 import com.theoldzheng.springTest.Order;
 import com.theoldzheng.springTest.Person;

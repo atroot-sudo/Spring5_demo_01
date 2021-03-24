@@ -5,4 +5,7 @@
 
 <!--    //工厂Bean的简单实现-->
     <bean id="test" class="com.theoldzheng.springTest2.MyBean"></bean>
+
+<!--    多例对象的创建  加标签scope="prototype" -->
+    <bean id="book1" class="com.theoldzheng.springTest.Book" scope="prototype"></bean>
 </beans>

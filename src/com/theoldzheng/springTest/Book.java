@@ -26,11 +26,11 @@ public class Book {
         this.id = id;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Book{" +
                 "name='" + name + '\'' +
                 ", id=" + id +
                 '}';
-    }
+    }*/
 }

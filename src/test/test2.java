@@ -1,6 +1,6 @@
-package com.theoldzheng.test;
 
-import com.theoldzheng.UserService.UserService;
+
+import com.theoldzheng.springTest.UserService.UserService;
 import com.theoldzheng.springTest.Staff;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;

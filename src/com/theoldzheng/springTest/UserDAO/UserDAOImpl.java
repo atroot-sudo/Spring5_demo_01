@@ -1,4 +1,4 @@
-package com.theoldzheng.UserDAO;
+package com.theoldzheng.springTest.UserDAO;
 
 /**
  * Description:

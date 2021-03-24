@@ -6,10 +6,10 @@
 
 <!--    注入属性  外部bean-->
     <!--    UserDAO实现类创建-->
-    <bean id="UserDAOImpl" class="com.theoldzheng.UserDAO.UserDAOImpl"></bean>
+    <bean id="UserDAOImpl" class="com.theoldzheng.springTest.UserDAO.UserDAOImpl"></bean>
 
     <!--    创建UserService-->
-    <bean id="UserService" class="com.theoldzheng.UserService.UserService">
+    <bean id="UserService" class="com.theoldzheng.springTest.UserService.UserService">
         <!--        利用set进行注入属性 需要实现set方法  或者也可以通过constructor来进行注入-->
         <property name="userDAO" ref="UserDAOImpl"></property>
     </bean>
